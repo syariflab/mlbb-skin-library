@@ -541,3 +541,13 @@ body{background:var(--bg);color:var(--text)}
  .header-actions{gap:6px}
 }
 @media(prefers-reduced-motion:reduce){.theme-toggle,.theme-thumb{transition:none}}
+
+
+/* Material Symbols inside hamburger navigation */
+.site-menu{width:214px;padding:8px}
+.site-menu a{display:flex;align-items:center;gap:13px;min-height:46px;padding:10px 13px;border-radius:9px;font-size:13px;font-weight:500;transition:background-color .18s,color .18s}
+.site-menu a .menu-icon{width:20px;flex:0 0 20px;display:grid;place-items:center;font-family:"Material Symbols Rounded";font-size:20px;line-height:1;font-weight:normal;font-style:normal;font-feature-settings:"liga";-webkit-font-feature-settings:"liga";-webkit-font-smoothing:antialiased;color:var(--muted)}
+.site-menu a:hover .menu-icon,.site-menu a:focus-visible .menu-icon{color:var(--accent)}
+:root[data-theme="light"] .site-menu a .menu-icon{color:#687083}
+:root[data-theme="light"] .site-menu a:hover .menu-icon,:root[data-theme="light"] .site-menu a:focus-visible .menu-icon{color:#6653c7}
+@media(max-width:700px){.site-menu{width:208px}}
