@@ -365,12 +365,6 @@ button,a,input{-webkit-tap-highlight-color:transparent}
 @media(max-width:420px){.contributor-card{padding:14px}.contributor-avatar{width:42px;height:42px;flex-basis:42px}.save-skin-button{padding:0 9px}}
 
 
-/* Homepage project contributors */
-.project-contributors{width:min(100% - 48px,1180px);margin:0 auto;padding:34px 0 72px}
-.home-contributors{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),360px));gap:16px}
-.home-contributor-card{margin:0;min-width:0}
-@media(max-width:700px){.project-contributors{width:calc(100% - 32px);padding:28px 0 56px}.home-contributors{grid-template-columns:1fr}}
-
 /* Skin detail contributor layout — compact profile row */
 .detail-panel .contributor-card{
   display:flex;
