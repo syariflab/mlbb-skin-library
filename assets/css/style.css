@@ -68,3 +68,10 @@ button,a,input{-webkit-tap-highlight-color:transparent}
 /* Repository brand assets */
 .brand-logo{width:34px;height:34px;object-fit:contain;display:block;flex:0 0 auto}
 .footer-brand .brand-logo{width:30px;height:30px}
+
+
+/* Correct brand separation: personal site mark vs. ML Skin Archive logo */
+.brand-mark{width:31px;height:31px;display:grid;place-items:center;border-radius:9px;background:linear-gradient(135deg,#a99aff,#6653d8);color:#090b12;font-size:18px;flex:0 0 auto}
+.hero-emblem{gap:8px}
+.archive-logo{width:108px;height:108px;max-width:72%;object-fit:contain;border-radius:14px;transform:rotate(8deg)}
+@media(max-width:700px){.archive-logo{width:88px;height:88px}}
