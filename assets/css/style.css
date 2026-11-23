@@ -370,3 +370,84 @@ button,a,input{-webkit-tap-highlight-color:transparent}
 .home-contributors{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),360px));gap:16px}
 .home-contributor-card{margin:0;min-width:0}
 @media(max-width:700px){.project-contributors{width:calc(100% - 32px);padding:28px 0 56px}.home-contributors{grid-template-columns:1fr}}
+
+/* Skin detail contributor layout — compact profile row */
+.detail-panel .contributor-card{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  margin:28px 0 8px;
+  padding:24px 28px;
+  border:1px solid rgba(255,255,255,.035);
+  border-radius:12px;
+  background:#0c0d10;
+}
+.detail-panel .contributor-avatar{
+  width:88px;
+  height:88px;
+  flex:0 0 88px;
+  border:0;
+  border-radius:50%;
+  object-fit:cover;
+  box-shadow:none;
+}
+.contributor-details{display:flex;flex:1;flex-direction:column;gap:12px;min-width:0}
+.contributor-topline{display:flex;align-items:center;flex-wrap:wrap;gap:16px;min-width:0}
+.contributor-topline .contributor-name{
+  color:#f5f5f7;
+  font:700 22px "Space Grotesk",sans-serif;
+  text-decoration:underline;
+  text-underline-offset:4px;
+}
+.contributor-separator{color:#777b84;font-size:22px}
+.contributor-topline .save-skin-button{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  min-height:0;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  color:#f5f5f7;
+  font:600 21px "DM Sans",sans-serif;
+}
+.contributor-topline .save-skin-button:hover{color:#c9c4ff}
+.save-bookmark{
+  display:inline-block;
+  width:14px;
+  height:21px;
+  flex:0 0 14px;
+  background:currentColor;
+  clip-path:polygon(0 0,100% 0,100% 100%,50% 76%,0 100%);
+}
+.save-skin-button:not(.is-saved) .save-bookmark{
+  background:transparent;
+  outline:2px solid currentColor;
+  outline-offset:-2px;
+  clip-path:polygon(0 0,100% 0,100% 100%,50% 76%,0 100%);
+}
+.contributor-updated{
+  display:flex;
+  align-items:baseline;
+  justify-content:flex-start;
+  gap:7px;
+  margin:0;
+  padding:0;
+  border:0;
+  color:#f0f0f2;
+  font-size:19px;
+  letter-spacing:0;
+}
+.contributor-updated strong{color:#f0f0f2;font-weight:400;text-align:left}
+@media(max-width:600px){
+  .detail-panel .contributor-card{gap:14px;padding:17px 15px}
+  .detail-panel .contributor-avatar{width:66px;height:66px;flex-basis:66px}
+  .contributor-details{gap:9px}
+  .contributor-topline{gap:9px}
+  .contributor-topline .contributor-name{font-size:16px}
+  .contributor-separator{font-size:17px}
+  .contributor-topline .save-skin-button{gap:7px;font-size:15px}
+  .save-bookmark{width:11px;height:17px;flex-basis:11px}
+  .contributor-updated{font-size:14px;flex-wrap:wrap}
+}
