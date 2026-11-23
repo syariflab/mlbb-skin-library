@@ -32,7 +32,7 @@
       <div class="empty-state" id="empty-state"><div class="empty-icon">⌕</div><h3>Belum ada koleksi</h3><p>Data skin akan ditambahkan setelah informasi dan sumbernya diverifikasi.</p></div>
     </section>
     <section class="project-contributors" aria-labelledby="project-contributors-title">
-      <div class="section-heading"><div><div class="eyebrow">PEOPLE BEHIND THE PROJECT</div><h2 id="project-contributors-title">Project contributor<span>.</span></h2></div></div>
+      <div class="eyebrow">PROJECT CONTRIBUTOR</div>
       <div id="home-contributors" class="home-contributors"><p class="page-copy">Memuat informasi kontributor...</p></div>
     </section>
   </main>
@@ -48,13 +48,10 @@
         }
         homeContributors.innerHTML = contributors.map(person => `
           <article class="contributor-card home-contributor-card">
-            <div class="contributor-heading">PROJECT CONTRIBUTOR</div>
-            <div class="contributor-content">
-              <img class="contributor-avatar" src="${escapeContributor(person.avatar)}" alt="Foto profil ${escapeContributor(person.name)}">
-              <div class="contributor-identity">
-                <a class="contributor-name" href="${escapeContributor(person.profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeContributor(person.name)} <span aria-hidden="true">↗</span></a>
-                <span class="contributor-role">Skin Library Contributor</span>
-              </div>
+            <img class="contributor-avatar" src="${escapeContributor(person.avatar)}" alt="Foto profil ${escapeContributor(person.name)}">
+            <div class="contributor-details">
+              <a class="contributor-name" href="${escapeContributor(person.profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeContributor(person.name)}</a>
+              <span class="contributor-role">Skin Library Contributor</span>
             </div>
           </article>`).join("");
       })
