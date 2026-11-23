@@ -227,3 +227,46 @@ button,a,input{-webkit-tap-highlight-color:transparent}
     filter:drop-shadow(0 3px 10px rgba(0,0,0,.72));
   }
 }
+
+
+/* ML Skin Archive emblem: softer depth, tilt and subtle floating motion */
+.hero-art .hero-emblem{
+  position:relative;
+  isolation:isolate;
+  transform:none;
+}
+.hero-art .hero-emblem::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  width:145%;
+  height:145%;
+  border-radius:50%;
+  background:radial-gradient(ellipse,rgba(156,140,255,.24) 0%,rgba(110,231,223,.08) 38%,transparent 72%);
+  filter:blur(18px);
+  pointer-events:none;
+}
+.archive-logo{
+  transform:rotate(-8deg) scale(1.035);
+  transform-origin:center;
+  filter:drop-shadow(0 18px 28px rgba(0,0,0,.58)) drop-shadow(0 0 18px rgba(156,140,255,.18));
+  transition:transform .35s ease,filter .35s ease;
+  animation:archive-emblem-float 5s ease-in-out infinite;
+  will-change:transform;
+}
+@keyframes archive-emblem-float{
+  0%,100%{translate:0 0}
+  50%{translate:0 -7px}
+}
+@media(hover:hover){
+  .hero-art:hover .archive-logo{
+    transform:rotate(-4deg) scale(1.075);
+    filter:drop-shadow(0 22px 34px rgba(0,0,0,.62)) drop-shadow(0 0 24px rgba(156,140,255,.28));
+  }
+}
+@media(max-width:700px){
+  .archive-logo{transform:rotate(-8deg) scale(1.025)}
+}
+@media(prefers-reduced-motion:reduce){
+  .archive-logo{animation:none;transition:none}
+}
