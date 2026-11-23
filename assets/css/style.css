@@ -458,3 +458,47 @@ button,a,input{-webkit-tap-highlight-color:transparent}
 .site-menu a{display:block;padding:12px 13px;border-radius:7px;color:#c4c9d5;font-size:13px}
 .site-menu a:hover,.site-menu a:focus-visible{background:#292442;color:#fff}
 @media(max-width:700px){body{padding-bottom:0}.topbar{position:sticky;top:0}.site-menu{right:16px}}
+
+
+/* Theme switcher — shared dark/light appearance */
+:root{color-scheme:dark;--bg:#090b12;--panel:#10131d;--panel2:#151a27;--line:#252b3a;--text:#f4f5fa;--muted:#9299aa;--accent:#9c8cff;--cyan:#6ee7df}
+:root[data-theme="light"]{color-scheme:light;--bg:#f4f5f9;--panel:#ffffff;--panel2:#eef0f6;--line:#dfe2eb;--text:#171923;--muted:#687083;--accent:#6653c7;--cyan:#168c83}
+body{background:var(--bg);color:var(--text)}
+.header-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.theme-toggle{width:42px;height:42px;display:grid;place-items:center;padding:0;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--text);font:600 19px "DM Sans",sans-serif;cursor:pointer}
+.theme-toggle:hover{border-color:var(--accent)}
+.theme-toggle:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+:root[data-theme="light"] .topbar{border-bottom-color:var(--line);background:rgba(244,245,249,.94)}
+:root[data-theme="light"] .menu-toggle{background:var(--panel);border-color:var(--line)}
+:root[data-theme="light"] .menu-toggle span{background:var(--text)}
+:root[data-theme="light"] .site-menu{background:#fff;border-color:var(--line);box-shadow:0 18px 45px #18203a22}
+:root[data-theme="light"] .site-menu a{color:#34394a}
+:root[data-theme="light"] .site-menu a:hover,:root[data-theme="light"] .site-menu a:focus-visible{background:#efedff;color:#34276f}
+:root[data-theme="light"] .brand-muted{color:#687083}
+:root[data-theme="light"] .desktop-nav a.active,:root[data-theme="light"] .desktop-nav a:hover{color:var(--text)}
+:root[data-theme="light"] .top-link{color:#42485a}
+:root[data-theme="light"] .hero-art::after{background:linear-gradient(90deg,rgba(244,245,249,.96) 0%,rgba(244,245,249,.82) 28%,rgba(244,245,249,.36) 52%,rgba(244,245,249,0) 100%)}
+:root[data-theme="light"] .hero-copy h1,:root[data-theme="light"] .hero-copy .hero-description,:root[data-theme="light"] .hero-copy .eyebrow{color:var(--text);text-shadow:none}
+:root[data-theme="light"] .hero-emblem small{color:#fff}
+:root[data-theme="light"] .search-box{background:#fff;color:#687083}
+:root[data-theme="light"] .search-box input{color:#171923}
+:root[data-theme="light"] .search-box kbd{border-color:#d5d9e4}
+:root[data-theme="light"] .filter{color:#596174}
+:root[data-theme="light"] .filter.active,:root[data-theme="light"] .filter:hover{background:#efedff;border-color:#b9afea;color:#49399b}
+:root[data-theme="light"] .notice,:root[data-theme="light"] .detail-note{background:#f0eefb;border-color:#d9d2f4;color:#514878}
+:root[data-theme="light"] .notice p{color:#514878}
+:root[data-theme="light"] .skin-card,:root[data-theme="light"] .hero-item{background:linear-gradient(145deg,#fff,#f0f2f8);border-color:var(--line)}
+:root[data-theme="light"] .skin-status{background:#e2f3ed;color:#26705b}
+:root[data-theme="light"] .empty-state h3{color:#242838}
+:root[data-theme="light"] .detail-panel{background:#fff;border-color:var(--line)}
+:root[data-theme="light"] .detail-meta span{background:#efedff;border-color:#d8d1f5;color:#49399b}
+:root[data-theme="light"] .contributor-card{background:#f0f2f7;border-color:var(--line)}
+:root[data-theme="light"] .detail-panel .contributor-card{background:#f7f8fb;border-color:var(--line)}
+:root[data-theme="light"] .contributor-name,:root[data-theme="light"] .contributor-topline .contributor-name,:root[data-theme="light"] .contributor-topline .save-skin-button,:root[data-theme="light"] .contributor-updated,:root[data-theme="light"] .contributor-updated strong{color:#202435}
+:root[data-theme="light"] .mobile-nav{background:rgba(255,255,255,.97);border-color:var(--line)}
+:root[data-theme="light"] .mobile-nav a{color:#687083}
+:root[data-theme="light"] .mobile-nav a[aria-current="page"]{color:#49399b;background:#efedff}
+:root[data-theme="light"] footer{color:#687083}
+:root[data-theme="light"] .footer-brand{color:#252a3a}
+:root[data-theme="light"] .breadcrumb a{color:#6653c7}
+@media(max-width:700px){.header-actions{gap:7px}.theme-toggle,.menu-toggle{width:40px;height:40px}.site-menu{right:16px}}
