@@ -75,3 +75,14 @@ button,a,input{-webkit-tap-highlight-color:transparent}
 .hero-emblem{gap:8px}
 .archive-logo{width:108px;height:108px;max-width:72%;object-fit:contain;border-radius:14px;transform:rotate(8deg)}
 @media(max-width:700px){.archive-logo{width:88px;height:88px}}
+
+
+/* Hero composition: header.webp is the backdrop; mlbb.webp sits visibly above it */
+.hero-art{position:relative;isolation:isolate;overflow:hidden}
+.hero-header-image{z-index:0;inset:0;width:100%;height:100%;opacity:.42;object-fit:cover;mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%)}
+.hero-art .orbit{z-index:1;pointer-events:none}
+.hero-art .hero-emblem{z-index:2;width:auto;height:auto;min-width:0;min-height:0;padding:0;background:transparent;border:0;border-radius:0;box-shadow:none;transform:none;gap:9px}
+.archive-logo{display:block;width:clamp(120px,17vw,190px);height:clamp(120px,17vw,190px);max-width:none;object-fit:contain;border-radius:12px;transform:none;filter:drop-shadow(0 12px 24px #000b)}
+.hero-emblem small{font-size:10px;letter-spacing:3px;color:#d2d5e2;text-shadow:0 2px 8px #000}
+.hero-art .float-tag{z-index:3}
+@media(max-width:700px){.hero-header-image{inset:0;height:100%}.archive-logo{width:clamp(112px,34vw,150px);height:clamp(112px,34vw,150px)}}
