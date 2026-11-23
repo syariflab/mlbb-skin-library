@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b12">
+  <meta name="description" content="MLBB Skin Library — katalog komunitas untuk informasi dan arsip skin Mobile Legends.">
+  <title>MLBB Skin Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="MLBB Skin Library home"><span class="brand-mark">S</span><span>SKIN<span class="brand-muted">LIBRARY</span></span></a>
+    <nav class="desktop-nav"><a class="active" href="#library">Library</a><a href="#about">About</a></nav>
+    <a class="top-link" href="https://github.com/syariflab/mlbb-skin-library" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> COMMUNITY SKIN DATABASE</div>
+        <h1>Explore the<br><span>Skin Library.</span></h1>
+        <p class="hero-description">Pusat katalog dan informasi skin Mobile Legends dari komunitas. Temukan koleksi berdasarkan hero, kategori, dan update terbaru.</p>
+        <a class="primary-button" href="#library">Jelajahi koleksi <span>↓</span></a>
+      </div>
+      <div class="hero-art" aria-label="Ilustrasi dekoratif">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="hero-emblem"><span>ML</span><small>SKIN<br>ARCHIVE</small></div>
+        <div class="float-tag tag-top">COLLECTION <b>01</b></div>
+        <div class="float-tag tag-bottom"><i></i> COMMUNITY DATABASE</div>
+      </div>
+      <div class="hero-foot"><span>01 / DISCOVER</span><span>BUILT FOR THE COMMUNITY</span></div>
+    </section>
+
+    <section class="library-section" id="library">
+      <div class="section-heading">
+        <div><div class="eyebrow">THE COLLECTION</div><h2>Skin catalog<span>.</span></h2></div>
+        <div class="catalog-count"><strong id="result-count">0</strong><span>ENTRIES</span></div>
+      </div>
+      <div class="toolbar">
+        <label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="Cari hero atau nama skin..." autocomplete="off"><kbd>/</kbd></label>
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="All">Semua</button>
+          <button class="filter" data-filter="Collector">Collector</button>
+          <button class="filter" data-filter="Legend">Legend</button>
+          <button class="filter" data-filter="Epic">Epic</button>
+          <button class="filter" data-filter="Special">Special</button>
+        </div>
+      </div>
+      <div class="notice"><span>i</span><p>Database sedang disiapkan. Entri akan ditambahkan setelah informasi dan sumber kontennya diverifikasi.</p></div>
+      <div class="catalog-grid" id="catalog-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state"><div class="empty-icon">⌕</div><h3>Belum ada koleksi</h3><p>Data skin akan muncul di sini. Coba kata kunci lain atau kembali lagi nanti.</p></div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-number">02</div>
+      <div><div class="eyebrow">ABOUT THIS PROJECT</div><h2>Dibuat untuk<br><span>komunitas.</span></h2></div>
+      <p>MLBB Skin Library adalah proyek katalog independen untuk mengorganisasi informasi skin dan materi komunitas yang memiliki izin untuk dibagikan. Proyek ini tidak berafiliasi dengan Moonton.</p>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">S</span><span>SKIN<span class="brand-muted">LIBRARY</span></span></a><span>Independent community project · 2026</span><a href="#library">Back to top ↑</a></footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
