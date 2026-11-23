@@ -187,3 +187,15 @@ button,a,input{-webkit-tap-highlight-color:transparent}
     object-position:center;
   }
 }
+
+
+/* Desktop hero readability */
+@media(min-width:701px){
+  .hero-copy{position:relative;z-index:5;width:min(100%,520px);align-self:start;padding-top:clamp(28px,5vw,72px)}
+  .hero-art::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(9,11,18,.97) 0%,rgba(9,11,18,.88) 28%,rgba(9,11,18,.55) 48%,rgba(9,11,18,.08) 75%,rgba(9,11,18,0) 100%)}
+  .hero-art .hero-emblem,.hero-art .orbit,.hero-art .float-tag{position:relative}
+  .hero-art .hero-emblem{z-index:2}
+  .hero-art .float-tag{z-index:3}
+  .hero-copy h1{text-shadow:0 3px 24px rgba(0,0,0,.55)}
+  .hero-copy .hero-description{color:#c2c6d2}
+}
