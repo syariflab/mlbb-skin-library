@@ -40,7 +40,10 @@
     const homeContributors = document.querySelector("#home-contributors");
     const escapeContributor = value => String(value ?? "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
     fetch("data/contributors.json")
-      .then(response => { if (!response.ok) throw new Error("Contributor data unavailable"); return response.json(); })
+      .then(response => {
+        if (!response.ok) throw new Error("Contributor data unavailable");
+        return response.json();
+      })
       .then(contributors => {
         if (!Array.isArray(contributors) || !contributors.length) {
           homeContributors.innerHTML = '<p class="page-copy">Belum ada kontributor yang ditambahkan.</p>';
@@ -56,9 +59,11 @@
                 <span class="contributor-role">Skin Library Contributor</span>
               </div>
             </div>
-          </article>`
+          </article>`).join("");
       })
-      .catch(() => { homeContributors.innerHTML = '<p class="page-copy">Informasi kontributor belum dapat dimuat.</p>'; });
+      .catch(() => {
+        homeContributors.innerHTML = '<p class="page-copy">Informasi kontributor belum dapat dimuat.</p>';
+      });
   </script>
   <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">S</span><span>SKIN<span class="brand-muted">LIBRARY</span></span></a><span>Independent community project · 2026</span><a href="#library">Back to top ↑</a></footer>
   <script src="assets/js/app.js"></script>
