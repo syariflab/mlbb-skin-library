@@ -11,6 +11,7 @@
 @media(max-width:700px){.page-shell{padding:55px 18px 70px}.hero-list{grid-template-columns:1fr 1fr}.detail-panel{padding:20px}}
 
 /* Mobile-first usability refinements */
+.mobile-nav{display:none}
 :focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
 button,a,input{-webkit-tap-highlight-color:transparent}
 @media(max-width:700px){
