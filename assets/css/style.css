@@ -502,3 +502,42 @@ body{background:var(--bg);color:var(--text)}
 :root[data-theme="light"] .footer-brand{color:#252a3a}
 :root[data-theme="light"] .breadcrumb a{color:#6653c7}
 @media(max-width:700px){.header-actions{gap:7px}.theme-toggle,.menu-toggle{width:40px;height:40px}.site-menu{right:16px}}
+
+
+/* Material 3 theme switch beside the hamburger */
+.header-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-left:auto;flex:0 0 auto}
+.theme-toggle{
+  position:relative;display:flex;align-items:center;justify-content:flex-start;
+  width:62px;height:36px;padding:4px;flex:0 0 62px;
+  border:1px solid #555b68;border-radius:999px;background:#30343d;
+  color:#f4f5fa;cursor:pointer;overflow:hidden;
+  transition:background-color .25s,border-color .25s,box-shadow .2s;
+}
+.theme-toggle:hover{box-shadow:0 0 0 3px rgba(156,140,255,.13)}
+.theme-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.theme-track{position:absolute;inset:0;border-radius:inherit;pointer-events:none}
+.theme-thumb{
+  position:absolute;top:3px;left:3px;width:28px;height:28px;
+  display:grid;place-items:center;border-radius:50%;
+  background:#d9dce5;color:#343743;
+  box-shadow:0 1px 3px #0004;
+  transition:transform .28s cubic-bezier(.2,.8,.2,1),background-color .25s,color .25s;
+}
+.theme-icon{font-family:"Material Symbols Rounded";font-size:18px;line-height:1;font-weight:normal;font-style:normal;font-feature-settings:"liga";-webkit-font-feature-settings:"liga";-webkit-font-smoothing:antialiased}
+.theme-toggle[aria-checked="true"]{background:#e7e2ff;border-color:#c8bfff;color:#42377e}
+.theme-toggle[aria-checked="true"] .theme-thumb{transform:translateX(26px);background:#6653c7;color:#fff}
+:root[data-theme="light"] .theme-toggle{background:#e7e2ff;border-color:#c8bfff}
+:root[data-theme="light"] .theme-thumb{background:#6653c7;color:#fff}
+.menu-toggle{flex:0 0 42px}
+@media(max-width:700px){
+ .header-actions{gap:8px}
+ .theme-toggle{width:58px;height:34px;flex-basis:58px}
+ .theme-thumb{width:26px;height:26px}
+ .theme-toggle[aria-checked="true"] .theme-thumb{transform:translateX(24px)}
+ .menu-toggle{width:40px;height:40px;flex-basis:40px}
+}
+@media(max-width:350px){
+ .topbar{padding-left:12px;padding-right:12px}
+ .header-actions{gap:6px}
+}
+@media(prefers-reduced-motion:reduce){.theme-toggle,.theme-thumb{transition:none}}
