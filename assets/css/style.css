@@ -64,6 +64,7 @@ button,a,input{-webkit-tap-highlight-color:transparent}
 /* Repository brand assets */
 .brand-logo{width:34px;height:34px;object-fit:contain;display:block;flex:0 0 auto}.footer-brand .brand-logo{width:30px;height:30px}.hero-art{isolation:isolate;overflow:hidden;border-radius:18px}.hero-header-image{position:absolute;inset:12px 0;width:100%;height:calc(100% - 24px);object-fit:cover;object-position:center;opacity:.24;filter:saturate(.82);border-radius:18px;z-index:-1;mask-image:linear-gradient(90deg,transparent 0%,#000 20%,#000 80%,transparent 100%)}.hero-art .orbit,.hero-art .hero-emblem,.hero-art .float-tag{z-index:1}
 
-/* MLBB logo belongs to the ML SKIN ARCHIVE emblem, not site branding */
-.hero-mlbb-logo{width:104px;height:104px;object-fit:contain;display:block;filter:drop-shadow(0 8px 22px #0008)}
-@media(max-width:700px){.hero-mlbb-logo{width:88px;height:88px}}
+
+/* Repository brand assets */
+.brand-logo{width:34px;height:34px;object-fit:contain;display:block;flex:0 0 auto}
+.footer-brand .brand-logo{width:30px;height:30px}
