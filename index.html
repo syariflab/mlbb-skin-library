@@ -8,9 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-</head>
+  </head>
 <body>
-  <header class="topbar"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">S</span><span>SKIN<span class="brand-muted">LIBRARY</span></span></a><button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="site-menu"><span></span><span></span><span></span></button>
+  <header class="topbar"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">S</span><span>SKIN<span class="brand-muted">LIBRARY</span></span></a><div class="header-actions"><button class="theme-toggle" type="button" aria-label="Aktifkan mode terang" title="Ganti tema"><span class="theme-icon" aria-hidden="true">☀</span></button><button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="site-menu"><span></span><span></span><span></span></button></div>
     <nav class="site-menu" id="site-menu" hidden>
       <a href="index.html">Library</a>
       <a href="pages/heroes.html">Heroes</a>
@@ -43,4 +43,4 @@
 button.addEventListener("click",()=>{const open=button.getAttribute("aria-expanded")==="true";button.setAttribute("aria-expanded",String(!open));button.setAttribute("aria-label",open?"Buka menu":"Tutup menu");menu.hidden=open;});
 document.addEventListener("click",event=>{if(!button.contains(event.target)&&!menu.contains(event.target)){button.setAttribute("aria-expanded","false");button.setAttribute("aria-label","Buka menu");menu.hidden=true;}});
 document.addEventListener("keydown",event=>{if(event.key==="Escape"){button.setAttribute("aria-expanded","false");button.setAttribute("aria-label","Buka menu");menu.hidden=true;}});
-})();</script></body></html>
+})();</script><script src="assets/js/theme.js"></script></body></html>
