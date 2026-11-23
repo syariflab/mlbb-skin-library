@@ -86,3 +86,18 @@ button,a,input{-webkit-tap-highlight-color:transparent}
 .hero-emblem small{font-size:10px;letter-spacing:3px;color:#d2d5e2;text-shadow:0 2px 8px #000}
 .hero-art .float-tag{z-index:3}
 @media(max-width:700px){.hero-header-image{inset:0;height:100%}.archive-logo{width:clamp(112px,34vw,150px);height:clamp(112px,34vw,150px)}}
+
+
+/* Hero artwork: full-bleed background with logo only */
+.hero-art{position:relative;min-height:360px;isolation:isolate;overflow:hidden;border-radius:18px}
+.hero-header-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.78;filter:saturate(1.08) brightness(.9);border-radius:18px;z-index:0;mask-image:none}
+.hero-art .orbit{z-index:1;pointer-events:none}
+.hero-art .hero-emblem{z-index:2;width:auto;height:auto;min-width:0;min-height:0;padding:0;background:transparent;border:0;border-radius:0;box-shadow:none;transform:none;display:grid;place-items:center}
+.archive-logo{display:block;width:clamp(118px,16vw,170px);height:clamp(118px,16vw,170px);max-width:none;object-fit:contain;border-radius:12px;transform:none;filter:drop-shadow(0 12px 26px #000b)}
+.hero-emblem small{display:none}
+.hero-art .float-tag{z-index:3}
+@media(max-width:700px){
+ .hero-art{min-height:330px;margin-top:14px}
+ .hero-header-image{inset:0;width:100%;height:100%;opacity:.82;object-position:center}
+ .archive-logo{width:clamp(112px,34vw,145px);height:clamp(112px,34vw,145px)}
+}
