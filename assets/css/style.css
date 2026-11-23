@@ -347,3 +347,19 @@ button,a,input{-webkit-tap-highlight-color:transparent}
   .archive-logo{width:108px;height:108px}
   .hero-art .float-tag{font-size:7px;padding:7px}
 }
+
+
+/* Contributor information on skin detail pages */
+.contributor-card{margin:28px 0 8px;padding:18px;border:1px solid var(--line);border-radius:11px;background:linear-gradient(145deg,#151a27,#10131d)}
+.contributor-heading{font-size:9px;font-weight:700;letter-spacing:1.8px;color:var(--muted);margin-bottom:14px}
+.contributor-content{display:flex;align-items:center;gap:12px;min-width:0}
+.contributor-avatar{width:48px;height:48px;flex:0 0 48px;object-fit:cover;border-radius:50%;border:1px solid rgba(169,154,255,.5);box-shadow:0 4px 16px #0008}
+.contributor-identity{display:flex;flex:1;flex-direction:column;gap:4px;min-width:0}
+.contributor-name{width:fit-content;color:#f4f5fa;font:700 14px "Space Grotesk",sans-serif}
+.contributor-name span{color:var(--accent);font-size:12px}
+.contributor-role{color:var(--muted);font-size:10px}
+.save-skin-button{flex:0 0 auto;min-height:36px;padding:0 13px;border:1px solid #514778;border-radius:7px;background:#292442;color:#d8d0ff;font:600 11px "DM Sans",sans-serif;cursor:pointer}
+.save-skin-button.is-saved{border-color:#35665f;background:#19322f;color:#a5e5d8}
+.contributor-updated{display:flex;justify-content:space-between;gap:12px;margin-top:15px;padding-top:12px;border-top:1px solid var(--line);font-size:9px;letter-spacing:1px;color:#777f91}
+.contributor-updated strong{font-weight:600;color:#b9bfd0;letter-spacing:0;text-align:right}
+@media(max-width:420px){.contributor-card{padding:14px}.contributor-avatar{width:42px;height:42px;flex-basis:42px}.save-skin-button{padding:0 9px}}
