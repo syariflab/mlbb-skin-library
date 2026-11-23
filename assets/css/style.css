@@ -270,3 +270,80 @@ button,a,input{-webkit-tap-highlight-color:transparent}
 @media(prefers-reduced-motion:reduce){
   .archive-logo{animation:none;transition:none}
 }
+
+
+/* Final hero tuning: larger, slightly right-shifted desktop emblem */
+@media(min-width:701px){
+  .hero-art .hero-emblem{
+    margin-right:clamp(18px,3.5vw,58px);
+  }
+  .archive-logo{
+    width:clamp(176px,20vw,232px);
+    height:clamp(176px,20vw,232px);
+  }
+}
+
+/* Mobile hero: balanced artwork height, safe logo scale and contained labels */
+@media(max-width:700px){
+  .hero{
+    padding:36px 16px 20px;
+    overflow:hidden;
+  }
+  .hero-copy{
+    width:100%;
+    min-width:0;
+  }
+  .hero-art{
+    width:100vw;
+    max-width:100vw;
+    min-height:0;
+    height:auto;
+    aspect-ratio:16 / 10;
+    margin:16px 0 0;
+    overflow:hidden;
+  }
+  .hero-header-image{
+    object-position:center center;
+  }
+  .hero-art .hero-emblem{
+    margin:0;
+    max-width:100%;
+  }
+  .archive-logo{
+    width:clamp(108px,31vw,148px);
+    height:clamp(108px,31vw,148px);
+  }
+  .hero-art .orbit-a{
+    width:clamp(220px,68vw,290px);
+    height:clamp(135px,43vw,180px);
+  }
+  .hero-art .orbit-b{
+    width:clamp(270px,82vw,350px);
+    height:clamp(175px,54vw,225px);
+  }
+  .hero-art .float-tag{
+    max-width:calc(50% - 20px);
+    padding:8px 9px;
+    font-size:8px;
+    letter-spacing:.8px;
+    white-space:nowrap;
+  }
+  .hero-art .tag-top{
+    top:12px;
+    right:14px;
+  }
+  .hero-art .tag-bottom{
+    left:14px;
+    bottom:12px;
+  }
+  .hero-foot{
+    gap:12px;
+    flex-wrap:wrap;
+  }
+}
+@media(max-width:380px){
+  .hero{padding-left:14px;padding-right:14px}
+  .hero-art{aspect-ratio:4 / 3}
+  .archive-logo{width:108px;height:108px}
+  .hero-art .float-tag{font-size:7px;padding:7px}
+}
