@@ -363,3 +363,10 @@ button,a,input{-webkit-tap-highlight-color:transparent}
 .contributor-updated{display:flex;justify-content:space-between;gap:12px;margin-top:15px;padding-top:12px;border-top:1px solid var(--line);font-size:9px;letter-spacing:1px;color:#777f91}
 .contributor-updated strong{font-weight:600;color:#b9bfd0;letter-spacing:0;text-align:right}
 @media(max-width:420px){.contributor-card{padding:14px}.contributor-avatar{width:42px;height:42px;flex-basis:42px}.save-skin-button{padding:0 9px}}
+
+
+/* Homepage project contributors */
+.project-contributors{width:min(100% - 48px,1180px);margin:0 auto;padding:34px 0 72px}
+.home-contributors{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),360px));gap:16px}
+.home-contributor-card{margin:0;min-width:0}
+@media(max-width:700px){.project-contributors{width:calc(100% - 32px);padding:28px 0 56px}.home-contributors{grid-template-columns:1fr}}
