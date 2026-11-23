@@ -10,11 +10,13 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header class="topbar"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">S</span><span>SKIN<span class="brand-muted">LIBRARY</span></span></a>
-    <nav class="desktop-nav"><a class="active" href="index.html">Library</a><a href="pages/heroes.html">Heroes</a><a href="pages/about.html">About</a></nav>
-    <a class="top-link" href="https://github.com/syariflab/mlbb-skin-library" target="_blank" rel="noreferrer">GitHub ↗</a>
-  </header>
-  <nav class="mobile-nav" aria-label="Navigasi utama"><a href="index.html" data-nav="library"><span>⌂</span><small>Library</small></a><a href="pages/heroes.html" data-nav="heroes"><span>♙</span><small>Heroes</small></a><a href="pages/about.html" data-nav="about"><span>ⓘ</span><small>About</small></a></nav>
+  <header class="topbar"><header class="topbar"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">S</span><span>SKIN<span class="brand-muted">LIBRARY</span></span></a><button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="site-menu"><span></span><span></span><span></span></button>
+    <nav class="site-menu" id="site-menu" hidden>
+      <a href="index.html">Library</a>
+      <a href="pages/heroes.html">Heroes</a>
+      <a href="pages/about.html">About</a>
+    </nav></header>
+  
 
   <main>
     <section class="hero"><div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> COMMUNITY SKIN DATABASE</div>
@@ -36,4 +38,9 @@
 
   <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">S</span><span>SKIN<span class="brand-muted">LIBRARY</span></span></a><span>Independent community project · 2026</span><a href="#library">Back to top ↑</a></footer>
   <script src="assets/js/app.js"></script>
-</body></html>
+<script>
+(()=>{const button=document.querySelector(".menu-toggle");const menu=document.querySelector("#site-menu");if(!button||!menu)return;
+button.addEventListener("click",()=>{const open=button.getAttribute("aria-expanded")==="true";button.setAttribute("aria-expanded",String(!open));button.setAttribute("aria-label",open?"Buka menu":"Tutup menu");menu.hidden=open;});
+document.addEventListener("click",event=>{if(!button.contains(event.target)&&!menu.contains(event.target)){button.setAttribute("aria-expanded","false");button.setAttribute("aria-label","Buka menu");menu.hidden=true;}});
+document.addEventListener("keydown",event=>{if(event.key==="Escape"){button.setAttribute("aria-expanded","false");button.setAttribute("aria-label","Buka menu");menu.hidden=true;}});
+})();</script></body></html>
