@@ -47,13 +47,16 @@
           return;
         }
         homeContributors.innerHTML = contributors.map(person => `
-          <article class="contributor-card home-contributor-card">
-            <img class="contributor-avatar" src="${escapeContributor(person.avatar)}" alt="Foto profil ${escapeContributor(person.name)}">
-            <div class="contributor-details">
-              <a class="contributor-name" href="${escapeContributor(person.profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeContributor(person.name)}</a>
-              <span class="contributor-role">Skin Library Contributor</span>
+          <article class="contributor-card">
+            <div class="contributor-heading">PROJECT CONTRIBUTOR</div>
+            <div class="contributor-content">
+              <img class="contributor-avatar" src="${escapeContributor(person.avatar)}" alt="Foto profil ${escapeContributor(person.name)}">
+              <div class="contributor-identity">
+                <a class="contributor-name" href="${escapeContributor(person.profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeContributor(person.name)} <span aria-hidden="true">↗</span></a>
+                <span class="contributor-role">Skin Library Contributor</span>
+              </div>
             </div>
-          </article>`).join("");
+          </article>`
       })
       .catch(() => { homeContributors.innerHTML = '<p class="page-copy">Informasi kontributor belum dapat dimuat.</p>'; });
   </script>
